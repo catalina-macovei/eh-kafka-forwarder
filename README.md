@@ -38,31 +38,31 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
   ![deployed resources](imgs/image2.png)
 
 ### 3. Create the function app
-    - Navigate to VSCode and press F1 to browse for Azure actions in Command Palette, choose ```Azure Functions: Create New Project```. 
-    - Choose the set up project folder, mine is ```az_functions```
-      ![create function app](imgs/image3.png)
-    - Next, you will have many prompts regarding:
-        - Language: python 
-        - Function app version model: V2
-        - Template: EventHub trigger.
-          This will allow the function to be triggered when a message is received from an Event Hub.
-        - Select Function Name
-        - Select Storage Account. You still can create a new one here, if you need.
-        - Select python version.
-        - In function generated app, you need to set the parameters.
-          ```
-          arg_name="azeventhub"
-          event_hub_name="your-eventhub-name"
-          connection="NAMESPACE_CONNECTION_STRING"
-          ```
-        - You can print some log info in order to test the function later.
-        - You should deploy the function using  VSCode Command Palette. 
-        - Next, you have to setup ```NAMESPACE_CONNECTION_STRING``` evironment variable in the newly created resource of your function app from Azure portal.
-          - This string you will take from ```EventHub Namespace > Settings > Shared Access Policies```. From window open to the left, copy ```Primary Connection String```. It looks like this:
-          ![select Primary Connection String](imgs/image4.png)
-          - In your ```function resource > Settings > Evironment variables > Add``` create the new environment variable and paste the connection string you copied earlier.
-          ![set env vars](imgs/image5.png)
-          - Deploy the function again.
+- Navigate to VSCode and press F1 to browse for Azure actions in Command Palette, choose ```Azure Functions: Create New Project```. 
+- Choose the set up project folder, mine is ```az_functions```
+  ![create function app](imgs/image3.png)
+- Next, you will have many prompts regarding:
+    - Language: python 
+    - Function app version model: V2
+    - Template: EventHub trigger.
+      This will allow the function to be triggered when a message is received from an Event Hub.
+    - Select Function Name
+    - Select Storage Account. You still can create a new one here, if you need.
+    - Select python version.
+    - In function generated app, you need to set the parameters.
+      ```
+      arg_name="azeventhub"
+      event_hub_name="your-eventhub-name"
+      connection="NAMESPACE_CONNECTION_STRING"
+      ```
+    - You can print some log info in order to test the function later.
+    - You should deploy the function using  VSCode Command Palette. 
+    - Next, you have to setup ```NAMESPACE_CONNECTION_STRING``` evironment variable in the newly created resource of your function app from Azure portal.
+      - This string you will take from ```EventHub Namespace > Settings > Shared Access Policies```. From window open to the left, copy ```Primary Connection String```. It looks like this:
+      ![select Primary Connection String](imgs/image4.png)
+      - In your ```function resource > Settings > Evironment variables > Add``` create the new environment variable and paste the connection string you copied earlier.
+      ![set env vars](imgs/image5.png)
+      - Deploy the function again.
 
 ### 4. Create a python event sender
 Next, we will create a python event sender script: ```send_event.py```. You can copy paste the code from my script but make sure o create a local ```.env``` in the root of the project following ```.env.example``` file structure.  
