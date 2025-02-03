@@ -48,7 +48,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
     - Next, you will have many prompts regarding:
         - Language: python 
         - Function app version model: V2
-        - Template: EventHub trigger
+        - Template: EventHub trigger.
           This will allow the function to be triggered when a message is received from an Event Hub.
         - Select Function Name
         - Select Storage Account. You still can create a new one here, if you need.
