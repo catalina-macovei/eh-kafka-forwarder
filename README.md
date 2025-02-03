@@ -59,7 +59,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
           event_hub_name="your-eventhub-name"
           connection="NAMESPACE_CONNECTION_STRING"
           ```
-        - You can print some log info in order to test it later.
+        - You can print some log info in order to test the function later.
         - You should deploy the function using  VSCode Command Palette. 
         - Next, you have to setup ```NAMESPACE_CONNECTION_STRING``` evironment variable in the newly created resource of your function app from Azure portal.
           - This string you will take from ```EventHub Namespace > Settings > Shared Access Policies```. From window open to the left, copy ```Primary Connection String```. It looks like this:
