@@ -3,7 +3,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
 
 ## Demo
 
-1. Evironment setup:
+### 1. Evironment setup:
     - Install VSCode if you don't have it already
 
     - Setup ubuntu WSL following [this link](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
@@ -22,7 +22,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
             ```pip install azure-identity```
             ```pip install aiohttp```
 
-2. Create an Event Hub from Azure portal
+### 2. Create an Event Hub from Azure portal
 - Create the Namespace
     - Select the subscription in which you want to create the namespace.
     - Select the resource group you created in the previous step.
@@ -41,7 +41,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
 - The end of this step should look like this:
   ![deployed resources](imgs/image2.png)
 
-3. Create the function app
+### 3. Create the function app
     - Navigate to VSCode and press F1 to browse for Azure actions in Command Palette, choose ```Azure Functions: Create New Project```. 
     - Choose the set up project folder, mine is ```az_functions```
       ![create function app](imgs/image3.png)
@@ -68,7 +68,8 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
           ![set env vars](imgs/image5.png)
           - Deploy the function again.
 
-4. Next, we will create a python event sender script: ```send_event.py```. You can copy paste the code from my script but make sure o create a local ```.env``` in the root of the project following ```.env.example``` file structure.  
+### 4. Create a python event sender
+Next, we will create a python event sender script: ```send_event.py```. You can copy paste the code from my script but make sure o create a local ```.env``` in the root of the project following ```.env.example``` file structure.  
   - Setup these ```.env``` variables
     ```
     CONNECTION_STRING=
@@ -77,7 +78,7 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
   - Then, run the script in your terminal with activated venv:
     ```python send_event.py``` 
 
-5. Check function invocation from Azure portal, by navigating to ```function resource > Invocations```:
+### 5. Check function invocation from Azure portal, by navigating to ```function resource > Invocations```:
 ![function invocations](imgs/image6.png)
 
 ## Author
