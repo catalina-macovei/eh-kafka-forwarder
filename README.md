@@ -80,6 +80,8 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
 5. Check function invocation from Azure portal, by navigating to ```function resource > Invocations```:
 ![function invocations](imgs/image6.png)
 
+## Author
+Catalina Macovei
 
 
 
