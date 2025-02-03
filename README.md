@@ -78,7 +78,8 @@ Next, we will create a python event sender script: ```send_event.py```. You can 
   - Then, run the script in your terminal with activated venv:
     ```python send_event.py``` 
 
-### 5. Check function invocation from Azure portal, by navigating to ```function resource > Invocations```:
+### 5. Check function invocation 
+Check function invocation from Azure portal, by navigating to ```function resource > Invocations```:
 ![function invocations](imgs/image6.png)
 
 ## Author
