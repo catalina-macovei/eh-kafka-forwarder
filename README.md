@@ -4,24 +4,19 @@ This is a python-based app that sends messages to Azure Event Hub and forwards t
 ## Demo
 
 ### 1. Evironment setup:
-    
-    - Install VSCode if you don't have it already
-    
-    - Setup ubuntu WSL following [this link](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
-    
-    - Install python extension
-    
-    - Install Azure Functions extension
-    
-    - Create a python venv by these steps:
-        - Navigate to the directory where you want to create your venv:
-            ```python -m venv myenv```
-        - Activate it:
-            ```source myenv/bin/activate```
-        - Install python packages within same venv:
-            ```pip install azure-eventhub```
-            ```pip install azure-identity```
-            ```pip install aiohttp```
+ - Install VSCode if you don't have it already  
+- Setup ubuntu WSL following [this link](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)  
+- Install python extension  
+- Install Azure Functions extension
+- Create a python venv by these steps:
+- Navigate to the directory where you want to create your venv:
+  ```python -m venv myenv```
+- Activate it:
+  ```source myenv/bin/activate```
+- Install python packages within same venv:
+    ```pip install azure-eventhub```
+    ```pip install azure-identity```
+    ```pip install aiohttp```
 
 ### 2. Create an Event Hub from Azure portal
 - Create the Namespace
